@@ -1,0 +1,355 @@
+:root{
+    --nav-hoverbackground: rgb(75,10,175);
+    font-family: Montserrat, sans-serif;
+    --nav-bar-color: rgb(25,25,25);
+    --nav-bar-button-hovercolor: rgb(35,35,35);
+    --project-card-color: rgb(26,26,26);
+    --project-card-outline-color: rgb(100,100,100);
+    --project-card-more-button-color: #6e647e;
+    --project-card-more-button-hovercolor: #9276df;
+}
+
+body{
+    background: rgb(10,10,10);
+    height: 2000px;
+}
+
+.nav-bar{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 65px;
+    background-color: var(--nav-bar-color);
+    top: 0;
+    left: 0;
+    justify-content: flex-end;
+    z-index: 999;
+}
+
+.nav-bar .nav-bar-logo{
+    position: absolute;
+    display: inline-block;
+    left: 230px;
+    align-self: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+.nav-bar a{
+    position: relative;
+    height: 65px;
+    background-color: var(nav-bar-color);
+    color: rgb(200,200,200);
+    right: 18%;
+    width: auto;
+    padding: 0 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 350ms;
+    text-decoration: none;
+    font-size: 13.5px;
+}
+
+.nav-bar .dropdown-menu-img{
+    position: fixed;
+    align-self: center;
+    cursor: pointer;
+    left: 80px;
+    transform: scale(0.85);
+    visibility: hidden;
+    user-select: none;
+}
+
+.side-nav-div{
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(50,50,50);
+    z-index: 1000;
+    visibility: hidden;
+    transition: 350ms;
+    justify-content: center;
+    display: block;
+}
+
+.side-nav-bar-logo-div{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    background-color: transparent;
+}
+
+.side-nav-bar-logo{
+    position: relative;
+    width: 128px;
+    height: 38px;
+    margin: 0 auto;
+    align-self: center;
+    user-select: none;
+}
+
+.side-nav-div a{
+    position: relative;
+    width: 0px;
+    height: 48px;
+    left: 0;
+    top: 85px;
+    color: rgba(255,255,255,.87);
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: 350ms;
+    padding: 0 32px;
+    font-size: 14px;
+    transition: 350ms;
+}
+
+.side-nav-div a:hover{
+    color: #d0aef7;
+    background-color: rgb(65,65,65);
+}
+
+.nav-bar a:hover{
+    background-color: var(--nav-bar-button-hovercolor);
+    color: rgb(255,255,255);
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.projects-div{
+    position: absolute;
+    display: flex;
+    left: 0;
+    top: 200px;
+    width: 100%;
+    height: 375px;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.projects-div h2{
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    width: 570px;
+    top: -20px;
+    animation: slide-in 0.5s ease-in-out forwards;
+}
+
+.projects-div .card-div{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border: 1px solid var(--project-card-outline-color);
+    background-color: var(--project-card-color);
+    cursor: pointer;
+    border-radius: 18px;
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+}
+
+.card-div .card-title{
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    top: -6px;
+    left: 26px;
+    font-weight: 500;
+}
+
+.card-div .card-description{
+    position: absolute;
+    color: rgb(200,200,200);
+    align-self: center;
+    left: 26px;
+    width: 80%;
+    font-size: 14px;
+    text-align: center;
+}
+
+.card-div .card-more-button{
+    position: absolute;
+    width: 175px;
+    height: 35px;
+    background-color: var(--project-card-more-button-color);
+    border: 0 solid transparent;
+    color: white;
+    bottom: 20px;
+    border-radius: 14px;
+    transition: 350ms;
+    cursor: pointer;
+}
+
+.card-div .card-more-button:hover{
+    background-color: var(--project-card-more-button-hovercolor);
+}
+
+.pynite-about-container {
+    position: absolute;
+    display: flex;
+    left: 0;
+    top: 125px;
+    width: 100%;
+    height: 375px;
+    justify-content: center;
+    background-color: rgb(15,15,15);
+}
+
+.pynite-description-div{
+    position: relative;
+    width: 800px;
+    height: 100%;
+    align-self: flex-end;
+    display: inline-block;
+    justify-content: center;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.pynite-description-div h2{
+    position: relative;
+    font-size: 40px;
+    color: #FFFF;
+    font-weight: 400;
+}
+
+.pynite-description-div h2::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 12%;
+    height: 3px;
+    bottom: -15px;
+    background-color: rgb(175,175,175);
+}
+
+.pynite-description-div h5{
+    position: relative;
+    font-size: 1.64rem;
+    margin-bottom: 0.86rem;
+    color: #FFFF;
+    font-weight: 400;
+}
+
+.pynite-description-div p{
+    position: relative;
+    font-size: 16px;
+    color: #FFFF;
+    font-weight: 400;
+}
+
+.pynite-download-btn-div{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 35px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.pynite-download-btn-div button{
+    position: absolute;
+    width: 175px;
+    height: 35px;
+    background-color: var(--project-card-more-button-color);
+    border: 0 solid transparent;
+    color: white;
+    border-radius: 36px;
+    transition: 350ms;
+    cursor: pointer;
+    box-shadow: 0 2px 2px 0 rgb(45,45,45);
+}
+
+.pynite-download-btn-div button:hover{
+    background-color: var(--project-card-more-button-hovercolor);
+}
+
+@media screen and (max-width: 620px){
+    .projects-div{
+        display: inline-block;
+        width: 100%;
+    }
+    .projects-div h2{
+        width: 100%;
+        text-align: center;
+        font-size: 48px;
+        top: -50px;
+    }
+    .projects-div .card-div{
+        top: 100px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 230px){
+    .projects-div h2{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 621px) and (max-width: 710px){
+    .projects-div h2{
+        padding-left: 55px;
+    }
+    .projects-div .card-div{
+        width: 240px;
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 385px){
+    .projects-div h2{
+        font-size: 32px;
+        top: -15px;
+    }
+    .projects-div .card-div{
+        width: 230px;
+        height: 230px;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .nav-bar .dropdown-menu-img{
+        visibility: visible;
+    }
+    .nav-bar{
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-bar a{
+        visibility: hidden;
+    }
+    .nav-bar .nav-bar-logo{
+        position: relative;
+        align-self: flex-end;
+        justify-content: center;
+        align-self: center;
+        margin-right: 22px;
+    }
+    .nav-bar .dropdown-menu-img{
+        position: absolute;
+        left: 35px;
+    }
+}
